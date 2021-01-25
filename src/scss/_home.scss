@@ -1,37 +1,82 @@
-.slide {
-	width: 100vw;
-	height: 100vh;
-}
-.wrapper {
-	display: flex;
-	flex-direction: row;
-	width: 400vw;
-	transform: rotate(90deg) translateY(-100vh);
-	transform-origin: top left;
-}
-.one {
-	background: #efdefe;
-}
-.two {
-	background: #a3f3d3;
-}
-.three {
-	background: #0bbaa0;
-}
-.four {
-	background: #00dfdf;
-}
-.outer-wrapper {
-	width: 100vh;
-	height: 100vw;
-	transform: rotate(-90deg) translateX(-100vh);
-	transform-origin: top left;
-	overflow-y: scroll;
+body {
 	overflow-x: hidden;
-	position: absolute;
-	scrollbar-width: none;
-	-ms-overflow-style: none;
+	// overflow-y: scroll;
 }
-::-webkit-scrollbar {
-	display: none;
+.container {
+	width: 600%;
+	height: 100%;
+	display: flex;
+	flex-wrap: nowrap;
+	.panel {
+		width: 150%;
+		height: 100vh;
+	}
+	.blue {
+		background-color: blue;
+		color: white;
+	}
+	.red {
+		background-color: white;
+	}
+	.orange {
+		background-color: orange;
+	}
+	.purple {
+		background-color: purple;
+	}
+	.green {
+		background-color: green;
+	}
+	.gray {
+		background-color: gray;
+	}
+}
+.box-holder {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	margin-top: 15%;
+	// height: 75%;
+	.box {
+		@include flex-center;
+		width: 100px;
+		height: 100px;
+		&.a {
+			background-color: orange;
+		}
+		&.b {
+			background-color: blue;
+		}
+		&.ghost-holder {
+			.ghost1 {
+				z-index: 0;
+				background-color: grey;
+				position: absolute;
+			}
+			.ghost2 {
+				z-index: -1;
+				background-color: rgb(104, 103, 103);
+				position: absolute;
+			}
+			.ghost3 {
+				z-index: -2;
+				background-color: rgb(69, 69, 69);
+				position: absolute;
+			}
+			.c {
+				z-index: 1;
+				background-color: cyan;
+				// margin-top: 150vh;
+				// position: absolute;
+				// bottom: -1vh;
+			}
+		}
+	}
+}
+section {
+	transition: background-color 0.5s;
+}
+
+section.active {
+	background-color: black !important;
 }

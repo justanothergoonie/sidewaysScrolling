@@ -134,53 +134,110 @@ table {
 	border-spacing: 0;
 }
 
-.slide {
-	width: 100vw;
+* {
+	box-sizing: border-box;
+	margin: 0;
+}
+
+body {
+	font-size: 16px;
+	height: 100%;
+}
+
+body {
+	overflow-x: hidden;
+}
+
+.container {
+	width: 600%;
+	height: 100%;
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.container .panel {
+	width: 150%;
 	height: 100vh;
 }
 
-.wrapper {
+.container .blue {
+	background-color: blue;
+	color: white;
+}
+
+.container .red {
+	background-color: white;
+}
+
+.container .orange {
+	background-color: orange;
+}
+
+.container .purple {
+	background-color: purple;
+}
+
+.container .green {
+	background-color: green;
+}
+
+.container .gray {
+	background-color: gray;
+}
+
+.box-holder {
 	display: flex;
-	flex-direction: row;
-	width: 400vw;
-	-ms-transform: rotate(90deg) translateY(-100vh);
-	    transform: rotate(90deg) translateY(-100vh);
-	-ms-transform-origin: top left;
-	    transform-origin: top left;
+	flex-direction: column;
+	justify-content: space-around;
+	margin-top: 15%;
 }
 
-.one {
-	background: #efdefe;
+.box-holder .box {
+	display: flex;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+	width: 100px;
+	height: 100px;
 }
 
-.two {
-	background: #a3f3d3;
+.box-holder .box.a {
+	background-color: orange;
 }
 
-.three {
-	background: #0bbaa0;
+.box-holder .box.b {
+	background-color: blue;
 }
 
-.four {
-	background: #00dfdf;
-}
-
-.outer-wrapper {
-	width: 100vh;
-	height: 100vw;
-	-ms-transform: rotate(-90deg) translateX(-100vh);
-	    transform: rotate(-90deg) translateX(-100vh);
-	-ms-transform-origin: top left;
-	    transform-origin: top left;
-	overflow-y: scroll;
-	overflow-x: hidden;
+.box-holder .box.ghost-holder .ghost1 {
+	z-index: 0;
+	background-color: grey;
 	position: absolute;
-	scrollbar-width: none;
-	-ms-overflow-style: none;
 }
 
-::-webkit-scrollbar {
-	display: none;
+.box-holder .box.ghost-holder .ghost2 {
+	z-index: -1;
+	background-color: #686767;
+	position: absolute;
+}
+
+.box-holder .box.ghost-holder .ghost3 {
+	z-index: -2;
+	background-color: #454545;
+	position: absolute;
+}
+
+.box-holder .box.ghost-holder .c {
+	z-index: 1;
+	background-color: cyan;
+}
+
+section {
+	transition: background-color 0.5s;
+}
+
+section.active {
+	background-color: black !important;
 }
 
 /*# sourceMappingURL=main.css.map */
