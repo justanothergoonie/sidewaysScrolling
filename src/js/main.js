@@ -34,13 +34,12 @@ gsap.ticker.add(() => {
 	let topLimit = experienceWrapper.getBoundingClientRect().top;
 	console.log(topLimit);
 	if (topLimit < 0) {
-		experience.style.top = -topLimit + 'px'; // keeps the panels in place
+		// experience.style.top = -topLimit + 'px'; // keeps the panels in place
 		experience.style.left = topLimit + 'px'; // keeps the panels in place
 	} else {
-		experience.style.top = 0 + 'px';
+		// experience.style.top = 0 + 'px';
 	}
-	let percent =
-		-topLimit / (experiencePadder.offsetHeight - panels[0].offsetHeight);
+	let percent = -topLimit / (experiencePadder.offsetHeight - panels[0].offsetHeight);
 	timeline.progress(percent);
 });
 
