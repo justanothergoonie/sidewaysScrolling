@@ -29,8 +29,7 @@ window.addEventListener('resize', resizeStuff);
 window.addEventListener('orientationchange', resizeStuff);
 resizeStuff();
 
-// window.addEventListener('scroll', () => {
-gsap.ticker.add(() => {
+window.addEventListener('scroll', () => {
 	let topLimit = experienceWrapper.getBoundingClientRect().top;
 	console.log(topLimit);
 	if (topLimit < 0) {
@@ -47,12 +46,12 @@ gsap.ticker.add(() => {
 // gsap animations
 
 // put a tween on the timeline
-timeline.to(
-	['.painting', '.table', '.man', '.gun', '.news'],
-	{
-		duration: 5, // takes 2 seconds
-		left: '50%',
-		top: '50%',
-	},
-	0
-); // starts at the 1 second mark
+// timeline.to(
+// 	['.painting', '.table', '.man', '.gun', '.news'],
+// 	{
+// 		duration: 2, // takes 2 seconds
+// 		left: '50%',
+// 		top: '50%',
+// 	},
+// 	1
+// ); // starts at the 1 second mark
