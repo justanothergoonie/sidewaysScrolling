@@ -11,7 +11,7 @@ $ratioInv: 1 / $ratio;
 	overflow: hidden;
 	position: relative;
 	width: 100%;
-	border: 3px solid green;
+
 	.experience-padder {
 		width: 0;
 		height: 2000px;
@@ -30,99 +30,279 @@ $ratioInv: 1 / $ratio;
 			&:nth-child(1) {
 				background-image: url(../../dist/img/1931.png);
 				background-size: contain;
-				border: 3px dashed #aaa444;
+				.lightboxify {
+					.painting {
+						width: 100%;
+						height: 40%;
+						background-image: url(../../dist/img/dark-painting.svg);
+						background-repeat: no-repeat;
+						position: absolute;
+						top: 20%;
+						left: 35%;
+						z-index: 0;
+					}
+					.man {
+						width: 24%;
+						height: 35%;
+						background-image: url(../../dist/img/default_man-02.svg);
+						background-repeat: no-repeat;
+						position: absolute;
+						top: 43.4%;
+						left: 39%;
+						z-index: 1;
+					}
+
+					.gun {
+						width: 17%;
+						height: 10%;
+						background-image: url(../../dist/img/Gun.svg);
+						background-repeat: no-repeat;
+						position: absolute;
+						top: 85%;
+						left: 30%;
+						z-index: 3;
+						&:hover.active {
+							width: 17%;
+							height: 10%;
+							background-image: url(../../dist/img/Gun_outlined-01.svg);
+							background-repeat: no-repeat;
+							position: absolute;
+							top: 85%;
+							left: 30%;
+							z-index: 3;
+						}
+					}
+					.dark-pic {
+						width: 34%;
+						height: 45%;
+						background-image: url(../../dist/img/dark-painting.svg);
+						background-repeat: no-repeat;
+						position: absolute;
+						top: 7%;
+						left: 34%;
+						z-index: 1;
+						background-size: contain;
+					}
+				}
 			}
 			&:nth-child(2) {
-				background-image: url(../../dist/img/1936.png);
+				background-image: url(../../dist/img/1946.png);
 				background-size: contain;
+				.lightboxify {
+					.boat {
+						width: 15%;
+						height: 20%;
+						background-image: url(../../dist/img/bottledBoat.svg);
+						background-repeat: no-repeat;
+						position: absolute;
+						top: 51%;
+						left: 24%;
+						z-index: 2;
+						-webkit-filter: grayscale(1);
+						filter: grayscale(1);
+					}
+				}
+				.dresser {
+					width: 22%;
+					height: 48%;
+					background-image: url(../../dist/img/nightStand.svg);
+					background-repeat: no-repeat;
+					position: absolute;
+					top: 68%;
+					left: 19%;
+					z-index: 1;
+					-webkit-filter: grayscale(1);
+					filter: grayscale(1);
+					background-size: contain;
+				}
+				.man2 {
+					width: 28%;
+					height: 40%;
+					background-image: url(../../dist/img/mafia-04.svg);
+					background-repeat: no-repeat;
+					position: absolute;
+					top: 37%;
+					left: 52%;
+					z-index: 2;
+					-webkit-filter: grayscale(1);
+					filter: grayscale(1);
+				}
+				.light-pic {
+					width: 30%;
+					height: 60%;
+					background-image: url(../../dist/img/light-pic.svg);
+					background-repeat: no-repeat;
+					position: absolute;
+					top: 7%;
+					left: 34%;
+					z-index: 1;
+					background-size: contain;
+					-webkit-filter: grayscale(1);
+					filter: grayscale(1);
+				}
+				.table {
+					width: 89%;
+					height: 23%;
+					background-image: url(../../dist/img/table2.png);
+					background-repeat: no-repeat;
+					position: absolute;
+					top: 77%;
+					left: 20%;
+					z-index: 1;
+					filter: grayscale(1);
+				}
 			}
 			&:nth-child(3) {
-				background-image: url(../../dist/img/1941.png);
+				background-image: url(../../dist/img/1951.png);
 				background-size: contain;
+				.lightboxify {
+					.news {
+						width: 20%;
+						height: 21%;
+						background-image: url(../../dist/img/newspaper-08.svg);
+						background-repeat: no-repeat;
+						position: absolute;
+						top: 78%;
+						left: 18%;
+						z-index: 3;
+					}
+					.mag-glass {
+						width: 21%;
+						height: 22%;
+						background-image: url(../../dist/img/mag-glass.svg);
+						background-repeat: no-repeat;
+						position: absolute;
+						top: 82%;
+						left: 51%;
+						/* object-fit: contain; */
+						background-size: contain;
+						z-index: 3;
+					}
+				}
 			}
 			&:nth-child(4) {
-				background: #777;
-				border: 3px dashed #aaa777;
+				background-image: url(../../dist/img/1967.png);
+				background-size: contain;
+				.lightboxify {
+					.lic-plate {
+						width: 15%;
+						height: 30%;
+						background-image: url(../../dist/img/lic-plate.png);
+						background-repeat: no-repeat;
+						position: absolute;
+						top: 15%;
+						left: 26%;
+						z-index: 3;
+						background-size: contain;
+					}
+					.food-plate {
+						width: 17%;
+						height: 17%;
+						background-image: url(../../dist/img/food-plate.png);
+						background-repeat: no-repeat;
+						position: absolute;
+						top: 70%;
+						left: 60%;
+						background-size: contain;
+						z-index: 3;
+					}
+				}
+				.rat {
+					width: 10%;
+					height: 10%;
+					background-image: url(../../dist/img/Rat-01.svg);
+					background-repeat: no-repeat;
+					position: absolute;
+					top: 79%;
+					left: 27%;
+					z-index: 3;
+					-webkit-filter: grayscale(1);
+					filter: grayscale(1);
+				}
 			}
 			&:nth-child(5) {
-				background: #888;
-				border: 3px dashed #aaa888;
-			}
-			&:nth-child(6) {
-				background: #999;
-				border: 3px dashed #aaa999;
+				background-image: url(../../dist/img/1970.png);
+				background-size: contain;
+				.lightboxify {
+					.cards {
+						width: 15%;
+						height: 15%;
+						background-image: url(../../dist/img/Cards.svg);
+						background-repeat: no-repeat;
+						position: absolute;
+						top: 82%;
+						left: 36%;
+						z-index: 3;
+						-webkit-filter: grayscale(1);
+						filter: grayscale(1);
+						background-size: contain;
+					}
+					.money {
+						width: 20%;
+						height: 30%;
+						background-image: url(../../dist/img/Cash.svg);
+						background-repeat: no-repeat;
+						position: absolute;
+						top: 70%;
+						left: 67%;
+						z-index: 3;
+						-webkit-filter: grayscale(1);
+						filter: grayscale(1);
+					}
+				}
 			}
 		}
 	}
 }
 
-.painting {
-	width: 100%;
-	height: 40%;
-	background-image: url(../../dist/img/default_picture-03.svg);
-	background-repeat: no-repeat;
-	position: absolute;
-	top: 20%;
-	left: 35%;
-	z-index: 0;
+.lightbox-backdrop {
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: rgba(255, 255, 255, 0.7);
+	background-repeat: repeat;
+	width: 100vw;
+	height: 100vh;
 }
-.table {
-	width: 100%;
-	height: 10%;
-	// padding-bottom: 10%;
-	background-image: url(../../dist/img/table.svg);
-	background-repeat: no-repeat;
-	position: absolute;
-	top: 80%;
-	z-index: 2;
-}
-.man {
-	width: 100%;
-	height: 35%;
-	background-image: url(../../dist/img/default_man-02.svg);
-	background-repeat: no-repeat;
-	position: absolute;
-	top: 43.4%;
-	left: 39%;
-	z-index: 1;
-}
-.man2 {
-	width: 60%;
-	height: 40%;
-	background-image: url(../../dist/img/mafia-04.svg);
-	background-repeat: no-repeat;
-	position: absolute;
-	top: 36.99%;
-	left: 45%;
-	z-index: 1;
-}
-.gun {
-	width: 20%;
-	height: 10%;
-	background-image: url(../../dist/img/Gun.svg);
-	background-repeat: no-repeat;
-	position: absolute;
-	top: 85%;
-	left: 30%;
-	z-index: 3;
-	&:hover.active {
-		width: 21%;
-		height: 12%;
-		background-image: url(../../dist/img/Gun_outlined-01.svg);
-		background-repeat: no-repeat;
+
+.lightbox {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	// background: rgba(255, 255, 255, 0.2);
+	// padding: 100%;
+	animation: 1s slide-up;
+	// height: 80%;
+	// margin-top: 0%;
+
+	img {
+		display: block;
+		max-width: 90vw;
+		max-height: 80vh;
+	}
+
+	.lightbox-close {
 		position: absolute;
-		top: 84%;
-		left: 30%;
-		z-index: 3;
+		top: 0;
+		right: 0;
+		width: 48px;
+		height: 48px;
+		transform: translate(50%, -50%);
+		border: 0;
+		outline: none;
+		background: none;
+		background-size: contain;
 	}
 }
-.news {
-	width: 20%;
-	height: 30%;
-	background-image: url(../../dist/img/newspaper-08.svg);
-	background-repeat: no-repeat;
-	position: absolute;
-	top: 79%;
-	left: 62%;
-	z-index: 3;
+
+@keyframes slide-up {
+	from {
+		margin-top: 100%;
+		// height: 300%;
+	}
+	to {
+		margin-top: 0%;
+		height: 100%;
+	}
 }

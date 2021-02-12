@@ -6,7 +6,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 let sections = gsap.utils.toArray('.panel');
 
-const NUM_PANELS = 6;
+const NUM_PANELS = 5;
 const PANEL_RATIO = 16 / 9;
 
 const experienceWrapper = document.querySelector('.experience-wrapper');
@@ -38,19 +38,19 @@ window.addEventListener('scroll', () => {
 	} else {
 		// experience.style.top = 0 + 'px';
 	}
-	let percent = -topLimit / (experiencePadder.offsetHeight - panels[0].offsetHeight);
+	let percent =
+		-topLimit / (experiencePadder.offsetHeight - panels[0].offsetHeight);
 	timeline.progress(percent);
 });
 
 // gsap animations
 
 // put a tween on the timeline
-// timeline.to(
-// 	['.painting', '.table', '.man', '.gun', '.news'],
-// 	{
-// 		duration: 2, // takes 2 seconds
-// 		left: '50%',
-// 		top: '50%',
-// 	},
-// 	1
-// ); // starts at the 1 second mark
+timeline.to(
+	['.table', '.man'],
+	{
+		duration: 17, // takes 2 seconds
+		x: '-10%',
+	},
+	0
+); // starts at the 1 second mark

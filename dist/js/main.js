@@ -3,7 +3,7 @@
 console.log("Hello World from main.js! \nChange this message, and make sure it changes in the browser \nto verify that you're working in the right files.");
 gsap.registerPlugin(ScrollTrigger);
 var sections = gsap.utils.toArray('.panel');
-var NUM_PANELS = 6;
+var NUM_PANELS = 5;
 var PANEL_RATIO = 16 / 9;
 var experienceWrapper = document.querySelector('.experience-wrapper');
 var experience = experienceWrapper.querySelector('.experience');
@@ -35,24 +35,19 @@ window.addEventListener('scroll', function () {
   console.log(topLimit);
 
   if (topLimit < 0) {
-    experience.style.top = -topLimit + 'px'; // keeps the panels in place
-
+    // experience.style.top = -topLimit + 'px'; // keeps the panels in place
     experience.style.left = topLimit + 'px'; // keeps the panels in place
-  } else {
-    experience.style.top = 0 + 'px';
-  }
+  } else {// experience.style.top = 0 + 'px';
+    }
 
   var percent = -topLimit / (experiencePadder.offsetHeight - panels[0].offsetHeight);
   timeline.progress(percent);
 }); // gsap animations
 // put a tween on the timeline
-// timeline.to(
-// 	['.painting', '.table', '.man', '.gun', '.news'],
-// 	{
-// 		duration: 2, // takes 2 seconds
-// 		left: '50%',
-// 		top: '50%',
-// 	},
-// 	1
-// ); // starts at the 1 second mark
+
+timeline.to(['.table', '.man'], {
+  duration: 17,
+  // takes 2 seconds
+  x: '-10%'
+}, 0); // starts at the 1 second mark
 //# sourceMappingURL=main.js.map
