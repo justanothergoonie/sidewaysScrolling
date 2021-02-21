@@ -14,6 +14,11 @@ var timeline = gsap.timeline({
   paused: true
 }); // set up a 100s timeline
 
+var tlShine = new gsap.timeline({
+  repeat: -1,
+  repeatDelay: 3
+});
+
 var resizeStuff = function resizeStuff() {
   var onePanelHeight = panels[0].offsetHeight; // just ask the first panel how tall it is, to find what CSS has currently calculated its height to be
 
@@ -50,4 +55,18 @@ timeline.to(['.table', '.man'], {
   // takes 2 seconds
   x: '-10%'
 }, 0); // starts at the 1 second mark
+
+tlShine.to(['#shine1', '#shine2'], {
+  duration: 0.8,
+  x: '100vw',
+  ease: 'power1.in'
+});
+tlShine.set(['#shine1', '#shine2'], {
+  x: '-100vw'
+});
+tlShine.to(['#shine1', '#shine2'], {
+  duration: 0.5,
+  x: '0vw',
+  ease: 'power1.out'
+}); // gsap.to('#shine2', { duration: 1, x: -150 });
 //# sourceMappingURL=main.js.map
