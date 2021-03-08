@@ -55,21 +55,18 @@ $ratioInv: 1 / $ratio;
 					.gun {
 						width: 17%;
 						height: 10%;
-						background-image: url(../../dist/img/Gun.svg);
-						background-repeat: no-repeat;
+						// background-image: url(../../dist/img/Gun.svg);
+						// background-repeat: no-repeat;
 						position: absolute;
 						top: 85%;
 						left: 30%;
 						z-index: 3;
-						&:hover.active {
-							width: 17%;
-							height: 10%;
-							background-image: url(../../dist/img/Gun_outlined-01.svg);
-							background-repeat: no-repeat;
-							position: absolute;
-							top: 85%;
-							left: 30%;
-							z-index: 3;
+						filter: grayscale(1);
+						#shine1 {
+							opacity: 0.7;
+						}
+						#shine2 {
+							opacity: 0.5;
 						}
 					}
 					.dark-pic {
@@ -197,24 +194,31 @@ $ratioInv: 1 / $ratio;
 					.lic-plate {
 						width: 15%;
 						height: 30%;
-						background-image: url(../../dist/img/lic-plate.png);
-						background-repeat: no-repeat;
+						// background-image: url(../../dist/img/lic-plate.png);
+						// background-repeat: no-repeat;
+						filter: grayscale(1);
 						position: absolute;
 						top: 15%;
 						left: 26%;
 						z-index: 3;
 						background-size: contain;
+						#shine1 {
+							opacity: 0.7;
+						}
+						#shine2 {
+							opacity: 0.9;
+						}
 					}
 					.food-plate {
 						width: 17%;
 						height: 17%;
-						background-image: url(../../dist/img/food-plate.png);
-						background-repeat: no-repeat;
+
 						position: absolute;
 						top: 70%;
 						left: 60%;
 						background-size: contain;
 						z-index: 3;
+						filter: grayscale(1);
 					}
 				}
 				.rat {
@@ -237,8 +241,7 @@ $ratioInv: 1 / $ratio;
 					.cards {
 						width: 15%;
 						height: 15%;
-						background-image: url(../../dist/img/Cards.svg);
-						background-repeat: no-repeat;
+
 						position: absolute;
 						top: 82%;
 						left: 36%;
@@ -250,8 +253,7 @@ $ratioInv: 1 / $ratio;
 					.money {
 						width: 20%;
 						height: 30%;
-						background-image: url(../../dist/img/Cash.svg);
-						background-repeat: no-repeat;
+
 						position: absolute;
 						top: 70%;
 						left: 67%;
